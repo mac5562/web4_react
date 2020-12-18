@@ -23,14 +23,14 @@ class RaceService{
         return axios.get(API_URL+'get',{ headers: authHeader() });
     }
    getRace(id){
-    return axios.get(API_URL+'get'+id,{ headers: authHeader() });
+    return axios.get(API_URL+'get/'+id,{ headers: authHeader() });
    }
 deleteRace(){
-    return axios.delete(API_URL+'get'+id,{ headers: authHeader() });
+    return axios.delete(API_URL+'remove/'+id,{ headers: authHeader() });
 }
 
 updateRace(id,kor,nem,datum,helyszin,tav,max_resztvevo,resztvevok,dobogosok){
-    return axios.put(API_URL+'get'+id,{
+    return axios.put(API_URL+'update/'+id,{
         kor,
         nem,  
         datum,
