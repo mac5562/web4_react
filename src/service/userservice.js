@@ -30,6 +30,7 @@ deleteUser(){
 
 updateUser(id,jogosultsag, email, jelszo,vezeteknev,keresztnev,szuletesi_datum,nem){
     return axios.put(API_URL+'update/'+id,{
+        jogosultsag,
         email,
         jelszo,
         vezeteknev,

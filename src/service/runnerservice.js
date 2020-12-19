@@ -27,7 +27,7 @@ deleteRunner(){
     return axios.delete(API_URL+'remove/'+id,{ headers: authHeader() });
 }
 
-updateRace(id,nevezo_id,email,vezeteknev,keresztnev,kor,nem){
+updateRunner(id,nevezo_id,email,vezeteknev,keresztnev,kor,nem){
     return axios.put(API_URL+'update/'+id,{
             nevezo_id,
             email,
