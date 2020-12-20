@@ -1,6 +1,6 @@
 import  {Card, Button} from "react-bootstrap";
 
-function Race() {
+function CurrentRaceCard() {
   return (  
     <div className="p-1 pb-2">
     <Card className="border border-primary" style={{ width: '18rem' }}>
@@ -14,7 +14,16 @@ function Race() {
       Résztvevők száma: 55  
       </Card.Text>
       <Card.Text>
-        <Button>Résztvevők listája</Button>
+     Táv: 8km
+      </Card.Text>
+      <Card.Text>
+      Ajánlott korosztály: 18  
+      </Card.Text>
+      <Card.Text>
+      Ajanlott nem: nő  
+      </Card.Text>
+      <Card.Text>
+            <Button>Jelentkezés</Button>
       </Card.Text>
     </Card.Body>
   </Card>
@@ -22,4 +31,4 @@ function Race() {
   );
 }
 
-export default Race;
+export default CurrentRaceCard;
