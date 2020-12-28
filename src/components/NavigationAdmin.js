@@ -1,7 +1,7 @@
 import  {Navbar,Nav} from "react-bootstrap";
 
 
-function Navigation() {
+function NavigationAdmin() {
   return (   
     <div>
     <Navbar  bg="primary" variant="dark" expand="lg">
@@ -9,8 +9,10 @@ function Navigation() {
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="container mr-auto">
-        <Nav.Link href="#home">Bejelentkezés/Regisztráció</Nav.Link>
+        <Nav.Link href="#home">Saját oldal</Nav.Link>
         <Nav.Link href="#link">Versenyek</Nav.Link> 
+        <Nav.Link href="#link">Verseny hozzáadása</Nav.Link>
+        <Nav.Link href="#link">Felhasználók kezelése</Nav.Link>
       </Nav>
     </Navbar.Collapse>
   </Navbar>
@@ -18,4 +20,4 @@ function Navigation() {
   );
 }
 
-export default Navigation;
+export default NavigationAdmin;
