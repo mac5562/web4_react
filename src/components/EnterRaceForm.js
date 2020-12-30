@@ -1,4 +1,4 @@
-import{Form, Button, Row, Col} from 'react-bootstrap';
+import{Form, Button, Row, Col, FormCheck} from 'react-bootstrap';
 
 function EnterRaceForm() {
   return (  
@@ -15,30 +15,35 @@ function EnterRaceForm() {
             </Form.Text>
           </Form.Group>
 
-          <Form.Group controlId="formBasicEmail">
+          <Form.Group controlId="formBasicVNev">
             <Form.Label className="text-primary h6">Vezetéknév</Form.Label>
             <Form.Control type="text"/>
           </Form.Group>
 
-          <Form.Group controlId="formBasicEmail">
+          <Form.Group controlId="formBasicKNev">
             <Form.Label className="text-primary h6">Keresztnév</Form.Label>
             <Form.Control type="text"/>
           </Form.Group>
 
-          <Form.Group controlId="formBasicEmail">
+          <Form.Group controlId="formBasicKor">
             <Form.Label className="text-primary h6">Életkor</Form.Label>
             <Form.Control type="number"/>
           </Form.Group>
 
-          <Form.Group controlId="formBasicCheckbox">
+          <Form.Group controlId="formBasicRadio">
             <Form.Label className="text-primary h6">Nem</Form.Label>
             <Row>
-              <Col><Form.Check type="checkbox" label="Nő" /></Col>
-              <Col><Form.Check type="checkbox" label="Férfi" /></Col> 
-              <Col></Col>
-              <Col></Col>
+              <Col><Form.Check inline type="radio" label="Nő" name="radioButtonNem" />
+              <Form.Check inline type="radio" label="Férfi" name="radioButtonNem"  />
+              </Col>   
             </Row>           
           </Form.Group>
+         {/*} <Form.Group controlId="formBasicCheckbox">
+            <Row>
+              <Col><Form.Check inline type="checkbox" label="Elfogadom a versenyszabályzatot" />
+              </Col>   
+            </Row>           
+  </Form.Group>{*/}
           <Button variant="primary" type="submit" block>
             Jelentkezek!
           </Button>
