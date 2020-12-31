@@ -4,16 +4,21 @@ import MyRaces from './components/MyRaces';
 import CurrentRaces from './components/CurrentRaces';
 import PreviousRaces from './components/PreviousRaces'
 import EnterRace from './components/EnterRace';
+import Login from './components/Login';
+import Registration from './components/Registration';
+
 function App() {
   return (   
     <div>
     <Navigation/>
-   {/*<PersonalPage/> 
+    {/*<PersonalPage/> 
     <MyRaces/>
     <CurrentRaces/>
-    <PreviousRaces/>*/ }
+    <PreviousRaces/>
     <EnterRace/>
-    
+    <Login/>
+    */ }
+    <Registration/>
     </div> 
   );
 }
