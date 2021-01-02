@@ -15,8 +15,8 @@ function App() {
     <MyRaces/>
     <CurrentRaces/>
     <PreviousRaces/>
-    <EnterRace/>
     <Login/>
+    <EnterRace/>
     */ }
     <Registration/>
     </div> 
