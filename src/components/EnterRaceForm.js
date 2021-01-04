@@ -27,7 +27,7 @@ function EnterRaceForm() {
 
           <Form.Group controlId="formBasicKor">
             <Form.Label className="text-primary h6">Életkor</Form.Label>
-            <Form.Control type="number"/>
+            <Form.Control type="number" min="12" max="70" value="12" />
           </Form.Group>
 
           <Form.Group controlId="formBasicRadio">

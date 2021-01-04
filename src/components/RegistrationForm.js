@@ -1,4 +1,5 @@
 import {Form, Button, Row, Col} from 'react-bootstrap';
+import DatePicker from './DateOfBirthPicker';
 
 function RegistrationForm () {
     return (
@@ -22,9 +23,6 @@ function RegistrationForm () {
                     {/* <Form.Group controlId="formRegistrationCheckbox">
                         <Form.Check type="checkbox" label="Elfogadom a felhasználási feltételeket." />
                     </Form.Group> */}
-                    <Button variant="primary" type="submit" block>
-                        Regisztrálok
-                    </Button>
                 </Form>
                 </Col>
                 <Col>
@@ -40,20 +38,24 @@ function RegistrationForm () {
                         <Form.Control type="text"/>
                     </Form.Group>
 
-                    <Form.Group controlId="formRegistrationAge">
+                    {/* <Form.Group controlId="formRegistrationAge">
                         <Form.Label className="text-primary h6">Születési idő</Form.Label>
                         <Form.Control type="text"/>
-                    </Form.Group>
-
-                    <Form.Group controlId="formRegistratonGender">
+                    </Form.Group> */}
+                    
+                    <DatePicker/>
+                    
+                    <Form.Group controlId="formBasicRadio">
                         <Form.Label className="text-primary h6">Nem</Form.Label>
                         <Row>
-                        <Col>
-                            <Form.Check inline type="radio" label="Nő" name="radioButtonWoman" />
-                            <Form.Check inline type="radio" label="Férfi" name="radioButtonMan"  />
+                        <Col><Form.Check inline type="radio" label="Nő" name="radioButtonGender" checked/>
+                        <Form.Check inline type="radio" label="Férfi" name="radioButtonGender"  />
                         </Col>   
                         </Row>           
                     </Form.Group>
+                    <Button variant="primary" type="submit" block>
+                        Regisztrálok
+                    </Button>
                 </Form>
                 </Col>
             </Row>
