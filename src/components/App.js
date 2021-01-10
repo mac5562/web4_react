@@ -1,26 +1,53 @@
-import Navigation from './components/Navigation';
-import PersonalPage from './components/PersonalPage';
-import MyRaces from './components/MyRaces';
-import CurrentRaces from './components/CurrentRaces';
-import PreviousRaces from './components/PreviousRaces'
-import EnterRace from './components/EnterRace';
-import Login from './components/Login';
-import Registration from './components/Registration';
+import React from 'react';
+import Navbar from './Navigation';
+import Banner from './Banner';
+import RunnerForm from './RunnerForm';
+import RunnerList from './RunnerList';
+import RunnerShow from './RunnerShow';
+import Register from './Register';
+import axios from 'axios';
+import {
+  BrowserRouter,
+  Route
+} from 'react-router-dom';
 
-function App() {
-  return (   
-    <div>
-    <Navigation/>
-    {/*<PersonalPage/> 
-    <MyRaces/>
-    <CurrentRaces/>
-    <PreviousRaces/>
-    <Login/>
-    <EnterRace/>
-    */ }
-    <Registration/>
-    </div> 
-  );
+class App extends React.Component {
+  state = {
+    loggedIn: false,
+    post: {}
+  }
+
+  getLink = (link) => {
+    axios.get(link)
+    .then(res => this.setState({post: res.data}))
+    .catch(error => console.log(error));
+  }
+  render() {
+    return (
+      <BrowserRouter>
+        <div className="App">
+          <Navbar/> 
+          <Route exact path="/">
+            <Banner/>
+          </Route>
+          <Route exact path="/addrunner">
+            <RunnerForm />
+          </Route>
+          <Route exact path="/runnerlist">
+            <RunnerList 
+            getLink={this.getLink}/>
+          </Route>
+          <Route path="/runner">
+            <RunnerShow
+            post={this.state.post}/>
+          </Route>
+          <Route exact path="/register">
+            <Register />
+          </Route>
+        </div>
+      </BrowserRouter>
+    );
+  }
 }
 
 export default App;
