@@ -1,21 +1,20 @@
 {
-  "name": "web4",
+  "name": "client",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:5000",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
+    "@testing-library/jest-dom": "^5.11.8",
+    "@testing-library/react": "^11.2.2",
+    "@testing-library/user-event": "^12.6.0",
     "axios": "^0.21.1",
     "bootstrap": "^4.5.3",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.0",
-    "react-bootstrap-date-picker": "^5.1.0",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
-    "redux": "^4.0.5",
-    "redux-thunk": "^2.3.0",
+    "sass": "^1.32.2",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
@@ -41,8 +40,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "redux-devtools-extension": "^2.13.8"
   }
 }
