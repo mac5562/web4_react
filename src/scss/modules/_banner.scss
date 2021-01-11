@@ -1,0 +1,22 @@
+.banner {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    width: 100;
+    min-height: 100vh;
+    &-content {
+        position: absolute;
+        width: 100vw;
+        height: 100%;
+        min-height: 100%;
+        right: 0;
+        top: 0;
+        z-index: 10000;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center
+    }
+}
